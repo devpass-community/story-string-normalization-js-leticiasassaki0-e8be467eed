@@ -1,5 +1,7 @@
 function removeAccent(str) {
-    // Add your solution here!
+	const response = str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+	return response;
 }
 
 module.exports = removeAccent;
